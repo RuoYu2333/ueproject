@@ -1,0 +1,49 @@
+# Unreal Engine generated folders
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+JetBrainsMono-1.0.3/
+
+# IDE / Editor files
+.vs/
+.vscode/
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sln
+.vsconfig
+
+# Rider / JetBrains
+.idea/
+*.iml
+
+# Visual Studio / temporary files
+*.log
+*.tmp
+*.obj
+*.exe
+*.dll
+*.pdb
+*.lib
+*.exp
+*.ipch
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+Build/
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+Plugins/*/Saved/
+
+# Keep the project file and source content
+!*.uproject
+!Source/
+!Config/
+!Content/
+!.github/
