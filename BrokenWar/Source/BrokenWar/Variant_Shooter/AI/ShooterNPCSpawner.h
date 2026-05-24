@@ -37,19 +37,27 @@ protected:
 
 	/** Number of NPCs to spawn */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="NPC Spawner", meta = (ClampMin = 0, ClampMax = 100))
-	int32 SpawnCount = 0;
+	int32 SpawnCount = 5;
 
 	/** Time to wait before spawning the next NPC after the current one dies */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="NPC Spawner", meta = (ClampMin = 0, ClampMax = 10))
-	float RespawnDelay = 5.0f;
+	float RespawnDelay = 10.0f;
 
 	/** Timer to spawn NPCs after a delay */
 	FTimerHandle SpawnTimer;
+	UPROPERTY()
+	TObjectPtr<AShooterNPC> CurrentSpawnedNPC;
+
+	/** 是否已经停止刷怪 */
+	bool bStopSpawning = false;
 
 public:	
 	
 	/** Constructor */
 	AShooterNPCSpawner();
+	/** 停止继续刷怪，必要时销毁当前 NPC */
+	UFUNCTION(BlueprintCallable, Category = "NPC Spawner")
+	void StopSpawning(bool bDestroyCurrentNPC = true);
 
 public:
 

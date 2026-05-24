@@ -8,7 +8,7 @@
 
 ABrokenWarGameMode::ABrokenWarGameMode()
 {
-	ScavengeTimeDuration = 120; // 2∑÷÷”
+	ScavengeTimeDuration = 180; // 3∑÷÷”
 	TimeRemaining = ScavengeTimeDuration;
 	CurrentStage = EGameStage::ScavengeStage;
 }
